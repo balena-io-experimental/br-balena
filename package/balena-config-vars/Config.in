@@ -1,0 +1,7 @@
+config BR2_PACKAGE_BALENA_CONFIG_VARS
+	bool "Balena config vars"
+	select BR2_PACKAGE_BASH # runtime
+	select BR2_PACKAGE_COREUTILS # runtime
+	select BR2_PACKAGE_JQ # runtime
+	help
+	  Random scripts for balena configuration

@@ -1,1 +1,2 @@
 source "$BR2_EXTERNAL_BALENA_PATH/package/balena-supervisor/Config.in"
+source "$BR2_EXTERNAL_BALENA_PATH/package/balena-config-vars/Config.in"
