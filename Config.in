@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_BALENA_PATH/package/balena-supervisor/Config.in"

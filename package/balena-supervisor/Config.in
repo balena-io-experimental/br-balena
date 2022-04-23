@@ -1,0 +1,25 @@
+config BR2_PACKAGE_BALENA_SUPERVISOR_SUPPORTS
+	bool
+	default y if BR2_i386
+	default y if BR2_x86_64
+	default y if BR2_aarch64
+	default y if BR2_arm
+
+config BR2_PACKAGE_BALENA_SUPERVISOR_TARGET_ARCH
+	string
+	default armv7hf if BR2_arm
+	default amd64 if BR2_x86_64
+
+config BR2_PACKAGE_BALENA_SUPERVISOR
+	bool "Balena Supervisor"
+	depends on BR2_PACKAGE_BALENA_ENGINE
+	select BR2_PACKAGE_HOST_JQ
+	select BR2_PACKAGE_BALENA_CONFIG_VARS
+	select BR2_PACKAGE_HOST_LIBCURL
+	help
+	 Balena's agent on devices.
+
+	 https://github.com/balena-os/balena-supervisor
+
+comment "balena-supervisor needs balena-engine"
+	depends on !BR2_PACKAGE_BALENA_ENGINE
